@@ -47,3 +47,11 @@ Run in the console
 ```
 npm run dev
 ```
+
+## Configuring ESLint for React
+
+Install
+
+```
+npm run -D babel-eslint eslint-plugin-import eslint-plugin-js-a11y eslint-plugin-react
+```
