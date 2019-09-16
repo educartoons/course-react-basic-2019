@@ -22,4 +22,14 @@ Visual Studio Code > preferences > enable
 
 - Format on save
 
-Create .prettierrc
+Create .prettierrc file
+
+## ESLint
+
+Install EsLint
+
+```
+npm i -D eslint eslint-config-prettier
+```
+
+Create .eslintrc.json file
