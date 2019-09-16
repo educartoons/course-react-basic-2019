@@ -1,0 +1,23 @@
+{
+  "name": "react-sept",
+  "version": "1.0.0",
+  "description": "Dank Mono",
+  "main": "App.js",
+  "scripts": {
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/educartoons/course-react-basic-2019.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/educartoons/course-react-basic-2019/issues"
+  },
+  "homepage": "https://github.com/educartoons/course-react-basic-2019#readme",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}
