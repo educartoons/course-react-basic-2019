@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const useDropDown = (label, defaultState, options) => {
+const useDropdown = (label, defaultState, options) => {
   const [state, setState] = useState(defaultState);
   const id = `use-dropdown-${label.replace(' ', '').toLowerCase()}`;
   const Dropdown = () => (
@@ -13,9 +13,9 @@ const useDropDown = (label, defaultState, options) => {
         onBlur={e => setState(e.target.value)}
         disabled={options.length === 0}
       >
-        <option>All</option>
-        {options.map(item => (
-          <option key={item} value={item}>
+        {/* <option>All</option> */}
+        {options.map((item, i) => (
+          <option key={i} value={item}>
             {item}
           </option>
         ))}
@@ -25,4 +25,4 @@ const useDropDown = (label, defaultState, options) => {
   return [state, Dropdown, setState];
 };
 
-export default useDropDown;
+export default useDropdown;
