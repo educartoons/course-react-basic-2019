@@ -55,3 +55,11 @@ Install
 ```
 npm run -D babel-eslint eslint-plugin-import eslint-plugin-js-a11y eslint-plugin-react
 ```
+
+## Configuring ESLint for Hooks
+
+This is the oficial plugin for React Hooks
+
+```
+npm run -D eslint-plugin-react-hooks
+```
