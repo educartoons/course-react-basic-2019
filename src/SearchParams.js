@@ -3,8 +3,8 @@ import { ANIMALS } from '@frontendmasters/pet';
 
 const SearchParams = () => {
   // React Hook
-  const [location, setLocation] = useState('Seattle, WA');
 
+  const [location, setLocation] = useState('Seattle, WA');
   const [animal, setAnimal] = useState('dog');
 
   return (
@@ -30,8 +30,8 @@ const SearchParams = () => {
             id="animal"
           >
             <option value="">All</option>
-            {ANIMALS.map((animal, i) => (
-              <option key={i} value={animal}>
+            {ANIMALS.map(animal => (
+              <option key={animal} value={animal}>
                 {animal}
               </option>
             ))}
