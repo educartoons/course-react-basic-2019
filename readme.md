@@ -81,3 +81,9 @@ npm run -D eslint-plugin-react-hooks
   ]
 }
 ```
+
+## Using Mocks in order to run in offline mode
+
+```
+npm i -D cross-env
+```
