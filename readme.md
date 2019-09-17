@@ -87,3 +87,9 @@ npm run -D eslint-plugin-react-hooks
 ```
 npm i -D cross-env
 ```
+
+## Babel
+
+```
+npm i -D babel-eslint @babel/core @babel/present-env @babel/plugin-proposal-class-properties @babel/preset-react
+```
