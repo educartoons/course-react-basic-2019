@@ -16,14 +16,9 @@ class Carousel extends React.Component {
     return { photos };
   }
 
-  // constructor(props){
-  //   super();
-  //   this.handleIndexClick = this.handleIndexClick.bind(this)
-  // }
-
   handleIndexClick = event => {
     this.setState({
-      active: +event.target.dataset.set
+      active: +event.target.dataset.index
     });
   };
 
@@ -32,8 +27,8 @@ class Carousel extends React.Component {
     return (
       <div className="carousel">
         <img src={photos[active]} alt="animal" />
-        <div className="carousel-small">
-          {photos.map((photo, index) => {
+        <div className="carousel-smaller">
+          {photos.map((photo, index) => (
             // eslint-disable-next-line
             <img
               key={index}
@@ -43,8 +38,8 @@ class Carousel extends React.Component {
               src={photo}
               className={index === active ? 'active' : ''}
               alt="animal thumbnail"
-            />;
-          })}
+            />
+          ))}
         </div>
       </div>
     );
