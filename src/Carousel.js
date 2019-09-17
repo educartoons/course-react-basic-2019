@@ -16,6 +16,11 @@ class Carousel extends React.Component {
     return { photos };
   }
 
+  // constructor(props){
+  //   super();
+  //   this.handleIndexClick = this.handleIndexClick.bind(this)
+  // }
+
   handleIndexClick = event => {
     this.setState({
       active: +event.target.dataset.set
