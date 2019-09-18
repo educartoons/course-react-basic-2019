@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import pet, { ANIMALS } from '../api/index';
 import Results from './Results';
 import useDropdown from './useDropdown';
+import ThemeContext from './ThemeContext';
 
 const SearchParams = () => {
   // React Hook
@@ -11,6 +12,7 @@ const SearchParams = () => {
   const [animal, AnimalDropdown] = useDropdown('Animal', 'Dog', ANIMALS);
   const [breed, BreedDropdown, setBreed] = useDropdown('Breed', '', breeds);
   const [pets, setPets] = useState([]);
+  const [theme] = useContext(ThemeContext);
 
   async function requestPets() {
     const { animals } = await pet.animals({
@@ -56,7 +58,7 @@ const SearchParams = () => {
         <AnimalDropdown />
         <BreedDropdown />
 
-        <button>submit</button>
+        <button style={{ backgroundColor: theme }}>submit</button>
       </form>
 
       <Results pets={pets} />
