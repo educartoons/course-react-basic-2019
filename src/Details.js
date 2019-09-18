@@ -10,6 +10,7 @@ class Details extends React.Component {
     pet
       .animal(parseInt(this.props.id))
       .then(({ animal }) => {
+        console.log('null', animal);
         this.setState({
           name: animal.name,
           animal: animal.type,
@@ -23,9 +24,13 @@ class Details extends React.Component {
       .catch(err => this.setState({ error: err }));
   }
   render() {
+    // if (this.state.animal === undefined) {
+    //   return <h1>The id is wrong...</h1>;
+    // }
     if (this.state.loading) {
       return <h1>Loading...</h1>;
     }
+
     const { animal, breed, description, location, name, media } = this.state;
 
     return (
